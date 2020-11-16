@@ -1,11 +1,11 @@
-bool isSubsequence(int[] arrayA, int[] arrayB) {
-    int startIndexB = 0;
-    foreach (int n in arrayA) {
-        int next = indexOf(arrayB, startIndexB , n);
+bool isValidSubsequence(int[] array, int[] Seq) {
+    int startIndex = 0;
+    foreach (int n in array) {
+        int next = indexOf(Seq, startIndex , n);
         if (next == NOT_FOUND) {
             return false;
         }
-        startIndexB = next+1;
+        startIndex = next+1;
     }
     return true;
 }
